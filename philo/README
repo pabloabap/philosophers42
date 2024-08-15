@@ -1,0 +1,12 @@
+**NOTES**
+
+`EVEN`: Request first right fork. 
+`ODD`: In first round waits 1ms and request left fork.
+In this way its garanteed that EVEN guests eat first, avoiding deadlocks at 
+the beggining.
+
+To avoid philosophers unnecesary innanition deads is important to maintain the
+right order of taking forks. For this reason the order of leave the forks 
+after eat for all philosophers will be: leave right forks first, then left one.
+In this way a ficticcious delay will be generated to garantee the meals order
+when the total number of philosopher is an even number.
