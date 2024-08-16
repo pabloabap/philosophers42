@@ -12,8 +12,10 @@ THREAD_LINK =	-pthread
 OBJS 		=	main.o \
 				ft_input_checker.o \
 				ft_utils.o \
-				ft_errors.o
-
+				ft_atoi.o \
+				ft_errors.o \
+				ft_init_data.o
+#				ft_routine.o
 HEADERS		= philo.h
 
 all: $(NAME)

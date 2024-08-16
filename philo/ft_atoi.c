@@ -6,11 +6,11 @@
 /*   By: pabad-ap <pabad-ap@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 21:08:07 by pabad-ap          #+#    #+#             */
-/*   Updated: 2023/09/30 00:17:31 by pabad-ap         ###   ########.fr       */
+/*   Updated: 2024/08/16 01:17:58 by pabad-ap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "philo.h"
 
 int	ft_atoi(const char *str)
 {

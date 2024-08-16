@@ -6,50 +6,49 @@
 /*   By: pabad-ap <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 01:28:55 by pabad-ap          #+#    #+#             */
-/*   Updated: 2024/08/15 01:36:02 by pabad-ap         ###   ########.fr       */
+/*   Updated: 2024/08/16 04:27:10 by pabad-ap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
+static int	ft_digits_check(int argc, char **argv);
+
 /** Check if the input is correct, otherwise return error message.
- * Input is correct when all arg characters are digits and the number 
- * of arguments are 4/5 (expluding program name). All args should be
- * grater that 1 except `number_of_times_ech_philosopher_must_eat`,
- * that is optional and can also be 0.
  * 
  * @param argc Number of arguments recibed by the program.
  * @param argv Values of the arguments.
  * 
+ * @return Exit status.
+ * 
 */
-
-int	ft_input_check(int argc, char **argv)
+int	ft_input_checks(int argc, char **argv)
 {
-	int i;
-	int j;
-	int	status;
+	if (argc != 5 && argc != 6)
+		return (ft_err_argn());
+	if (EXIT_FAILURE == ft_digits_check(argc, argv))
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
+}
+
+/** Check that arguments are only digits */
+static int	ft_digits_check(int argc, char **argv)
+{
+	int	i;
+	int	j;
 
 	i = 1;
 	j = 0;
-	status = EXIT_SUCCESS;
-	if (argc != 6 && argc != 7)
-		status = ft_err_argn();
-	while (argc > i && EXIT_SUCCESS == status)
+	while (argc > i)
 	{
-		while (argv[i][j] && EXIT_SUCCESS == status)
+		while (argv[i][j])
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
-				status = ft_err_argv_format();
+				return (ft_err_argv_format());
 			j++;
 		}
 		j = 0;
 		i ++;
 	}
-	return (status);
+	return (EXIT_SUCCESS);
 }
-
-/*
-int	ft_args_to_int
-{
-	
-}*/
