@@ -29,6 +29,8 @@ typedef struct s_philo
 	int				initial_delay;
 	pthread_mutex_t	*first_fork;
 	pthread_mutex_t	*second_fork;
+	pthread_t		*thread_id;
+	struct s_data	*rules;
 }					t_philo;
 
 typedef struct s_data
@@ -38,9 +40,11 @@ typedef struct s_data
 	int				time_die;
 	int				time_eat;
 	int				time_sleep;
-	int				meals;
-	int				deadth_flag;
+	int				mandatory_meals;
+	int				end_flag;
 	pthread_mutex_t	*array_forks;
+	pthread_mutex_t	*write;
+	pthread_mutex_t	*end_flag_update;
 	t_philo			*array_philos;
 }					t_data;		
 
@@ -58,5 +62,15 @@ int		ft_init_data(int argc, char **argv, struct timeval tv, t_data *data);
 //ERRORS
 int		ft_err_argn(void);
 int		ft_err_argv_format(void);
+
+void	ft_clean_data(t_data *data);
+int		ft_update_end_flag(pthread_mutex_t *locker, int *end_flag, int deadth);
+void	ft_write_msg(pthread_mutex_t *write_locker, char *msg, long long ts, \
+	int philo_id);
+void	*ft_routine(void *arg);
+
+int		ft_take_forks(t_philo *philo);
+int		ft_leave_fork(t_philo *philo);
+int		ft_philos_allocation(t_philo **philos, int num_philos);
 
 #endif

@@ -14,8 +14,11 @@ OBJS 		=	main.o \
 				ft_utils.o \
 				ft_atoi.o \
 				ft_errors.o \
-				ft_init_data.o
-#				ft_routine.o
+				ft_init_data.o \
+				ft_clean_data.o \
+				ft_mutex_resources.o \
+				ft_routine.o
+				
 HEADERS		= philo.h
 
 all: $(NAME)

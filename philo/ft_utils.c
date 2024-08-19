@@ -60,3 +60,12 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd((n % 10) + 48, fd);
 }
+
+/** Allocate dynamic memory for philos data */
+int	ft_philos_allocation(t_philo **philos, int num_philos)
+{
+	*philos = (t_philo *)malloc(sizeof(t_philo) * num_philos);
+	if (NULL == *philos)
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
+}

@@ -25,6 +25,6 @@ int	ft_err_argn(void)
 /** Print error in STDERR_FILENO and return EXIT_FAILURE) */
 int	ft_err_argv_format(void)
 {
-	ft_putendl_fd("-philo: Arguments must be digits.", STDERR_FILENO);
+	ft_putendl_fd("-philo: Arguments must be unsigned digits.", STDERR_FILENO);
 	return (EXIT_FAILURE);
 }
