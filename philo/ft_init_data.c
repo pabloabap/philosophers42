@@ -20,6 +20,8 @@ static int	ft_philo_fill(t_philo **philos, int i, t_data *data);
 int	ft_init_data(int argc, char **argv, struct timeval tv, t_data *data)
 {
 	data->philos_n = ft_atoi(argv[1]);
+	if (data->philos_n < 1)
+		return (ft_putendl_fd("-philo: Minimun 1 philo", STDERR_FILENO), 1);
 	data->start_ts = tv.tv_sec * 1000000 + tv.tv_usec;
 	data->time_die = ft_atoi(argv[2]) * 1000;
 	data->time_eat = ft_atoi(argv[3]) * 1000;
@@ -78,8 +80,6 @@ static int	ft_init_philos(t_philo **philos, t_data *data)
 	int	i;
 
 	i = 0;
-	if (data->philos_n < 1)
-		return (ft_putendl_fd("-philo: Minimun 1 philo", STDERR_FILENO), 1);
 	if (EXIT_FAILURE == ft_philos_allocation(philos, data->philos_n))
 		return (EXIT_FAILURE);
 	while (i < data->philos_n)
