@@ -45,7 +45,32 @@ using threads and locking shared resources updates using mutex.
 
 ## Concepts
 ### Threads
+TBD
 ### Mutex
+TBD
 ### Data races
+TBD
 ### Deadlock
+TBD
 ### Inanition
+TBD
+
+## Implementation with threads and mutex
+### Explanation
+TBD
+### Allowed functions
+`memset`, `printf`, `malloc`, `free`, `write`, `usleep`, `gettimeofday`, 
+`pthread_create`, `pthread_detach`, `pthread_join`, `pthread_mutex_init`,
+`pthread_mutex_destroy`, `pthread_mutex_lock` y `pthread_mutex_unlock`.
+
+## Implementation with processes and semaphores
+In this implementation each **philo** must be a **process** and the main 
+process must has a philo. Forks are in the middle of the table, don't have 
+memory status but the **number of available forks is represented by a
+a semaphore**.
+### Allowed functions
+`memset`, `printf`, `malloc`, `free`, `write`, `fork`, `kill`, `exit`, 
+`pthread_create`, `pthread_detach`, `pthread_join`, `usleep`, `gettimeofday`, 
+`waitpd`, `sem_open`, `sem_close`, `sem_post`, `sem_wait`, `sem_unlink`.
+
+
