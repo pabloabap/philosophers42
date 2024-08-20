@@ -32,7 +32,7 @@ Other considerations:
 	- *timestamp_in_ms* *X* is thinking.
 	- *timestamp_in_ms* *X* died.
    
-	Replaing *timestamp_in_ms* by time passed since the simulation start
+	Replacing *timestamp_in_ms* by time passed since the simulation start
 	in miliseconds and *X* by philo number.
 - Logs must not been breaken by other philosophers.
 - The maximum delay between philo death and its log must be 10ms.
