@@ -5,7 +5,6 @@ They must complete the routine avoiding deadth when possible.
 In the dinning table each one has his own fork at one side (p.ex: right)
 but, to eat, they need the fork of his colleague at the other dise (left).
 
-<img align="right" width="100" height="100" src="https://es.wikipedia.org/wiki/Problema_de_la_cena_de_los_fil%C3%B3sofos#/media/Archivo:An_illustration_of_the_dining_philosophers_problem.png">
 The program receive `./philo number_of_philosophers time_to_die time_to_eat
 time_to_sleep [number_of_times_each_philosopher_must_eat]`:
 - `./philo`: Is the name of the program.
