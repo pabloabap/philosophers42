@@ -6,20 +6,20 @@
 /*   By: pabad-ap <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 01:28:26 by pabad-ap          #+#    #+#             */
-/*   Updated: 2024/08/16 04:33:36 by pabad-ap         ###   ########.fr       */
+/*   Updated: 2024/08/20 16:50:40 by pabad-ap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
 
-# include <string.h> //memset
-# include <stdio.h> //printf
-# include <stdlib.h> //malloc, free
-# include <unistd.h> //write, usleep
-# include <sys/time.h> //gettimeofday
-# include <pthread.h> //pthread_create|detach|join, mutex_init, destroy,[un]lock
-# include <errno.h> //macro de errnos
+# include <string.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <sys/time.h>
+# include <pthread.h>
+# include <errno.h>
 
 typedef struct s_philo
 {

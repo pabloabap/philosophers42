@@ -1,4 +1,15 @@
-//CABECERA
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_mutex_resources.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pabad-ap <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/20 16:33:37 by pabad-ap          #+#    #+#             */
+/*   Updated: 2024/08/20 16:33:43 by pabad-ap         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 int	ft_update_end_flag(pthread_mutex_t *locker, int *end_flag, int deadth)
@@ -11,7 +22,6 @@ int	ft_update_end_flag(pthread_mutex_t *locker, int *end_flag, int deadth)
 		*end_flag = deadth;
 	if (0 != pthread_mutex_unlock(locker))
 		return (EXIT_FAILURE);
-	printf("_UPDATE_EF: %i\n", *end_flag);
 	return (EXIT_SUCCESS);
 }
 
@@ -65,9 +75,12 @@ int	ft_leave_fork(t_philo *philo)
 	{
 		if (0 != pthread_mutex_unlock(philo->first_fork))
 			return (EXIT_FAILURE);
-		usleep (50);
-		if (0 != pthread_mutex_unlock(philo->second_fork))
-			return (EXIT_FAILURE);
+		if (philo->rules->philos_n > 1)
+		{
+			usleep (50);
+			if (0 != pthread_mutex_unlock(philo->second_fork))
+				return (EXIT_FAILURE);
+		}
 	}
 	return (EXIT_SUCCESS);
 }
