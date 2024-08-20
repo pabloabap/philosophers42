@@ -1,6 +1,8 @@
 # [Dining Philosophers Problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem)
 This problem is about some philosophers that have a repetitive routine of:
-> eat->sleep->think. 
+
+> eat->sleep->think.
+ 
 They must complete the routine avoiding deadth when possible.
 In the dinning table each one has his own fork at one side (p.ex: right)
 but, to eat, they need the fork of his colleague at the other dise (left).
@@ -24,13 +26,14 @@ Other considerations:
 - The don't talks inbetween.
 - They don't know if other philo will die.
 - The program must show the logs:
-	- <timestamp_in_ms> <X> has taken a fork.
-	- <timestamp_in_ms> <X> is eating.
-	- <timestamp_in_ms> <X> is sleeping.
-	- <timestamp_in_ms> <X> is thinking.
-	- <timestamp_in_ms> <X> died.
-	Replaing <timestamp_in_ms> by time passed since the simulation start
-	in miliseconds and <X> by philo number.
+	- *timestamp_in_ms* *X* has taken a fork.
+	- *timestamp_in_ms* *X* is eating.
+	- *timestamp_in_ms* *X* is sleeping.
+	- *timestamp_in_ms* *X* is thinking.
+	- *timestamp_in_ms* *X* died.
+   
+	Replaing *timestamp_in_ms* by time passed since the simulation start
+	in miliseconds and *X* by philo number.
 - Logs must not been breaken by other philosophers.
 - The maximum delay between philo death and its log must be 10ms.
 - Each philo mut be a **thread**.
