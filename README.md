@@ -36,7 +36,7 @@ Other considerations:
 	in miliseconds and *X* by philo number.
 - Logs must not been breaken by other philosophers.
 - The maximum delay between philo death and its log must be 10ms.
-- Each philo mut be a **thread**.
+- Each philo must be a **thread**.
 - To avoid fork duplication, each one must be protected by a **mutex**. 
 > The program must not have **data races**.
 
