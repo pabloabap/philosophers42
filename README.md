@@ -72,7 +72,7 @@ Threads status changes are: creation, lock, unlock or end.
 the difference is that these subprocesses **don't have shared resources**. In 
 their creation they generate a local copy of the resources of the main process.
 
-![Single vs Multithread](https://www.dropbox.com/scl/fi/c1tlcy3pu4dkbhnv5jhfm/Threads.svg?rlkey=4i41wcg85i63g97xhr3d7aqzc&st=3eyozmq5&dl=0)
+![Single vs Multithread](https://github.com/pabloabap/philosophers42/blob/main/Threads.svg)
 
 ### Mutex (Mutual Exclussion Algorithm)
 Used in concurrent programming to avoid that more than one thread or process 
