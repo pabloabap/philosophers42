@@ -43,9 +43,9 @@ Other considerations:
 > The program must not have **data races**.
 
 
->The way used to solve this concurrent problem is paralelizing philos/tasks
-using threads and locking shared resources updates using mutex or using
-processes and semaphores.
+The method used to solve this concurrent problem is paralelizing philos/tasks
+using threads and locking shared resources using mutex. It could also be solved
+using processes and semaphores.
 
 ## Concepts
 ### Threads
