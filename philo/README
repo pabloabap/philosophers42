@@ -1,7 +1,7 @@
 **NOTES**
 
-`EVEN`: Request first right fork. 
-`ODD`: In first round waits 1ms and request left fork.
+`ODD philo ID`: Request first right fork. 
+`EVEN philo ID`: In first round waits 1ms and request left fork.
 In this way its garanteed that EVEN guests eat first, avoiding deadlocks at 
 the beggining.
 
