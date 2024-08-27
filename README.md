@@ -77,7 +77,7 @@ their creation they generate a local copy of the resources of the main process.
 ### Mutex (Mutual Exclussion Algorithm)
 Used in concurrent programming to avoid that more than one thread or process 
 access to a critical section at the same time. **Critical section** is a frame 
-of the code where shared resources could be modified. Something similar in
+of the code where shared resources are modified or used. Something similar in
 real life could be a bathroom locker that locks the space when it is bussy and
 can be unlocked once finished.
 
