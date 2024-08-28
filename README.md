@@ -122,6 +122,9 @@ end that never have access to required resources.
 ## Implementation with threads and mutex
 ### Resources
  [CodeVault video's list about threads and mutex](https://www.youtube.com/watch?v=d9s_d28yJq0&list=PLfqABt5AS4FmuQf70psXrsMLEDQXNkLq2)
+ 
+ [POSIX.1-2017 Offitial documentation](https://pubs.opengroup.org/onlinepubs/9799919799/nframe.html).
+ This page is a complement of terminal man files. It contains C strandards and manuals (for example info about [threads](https://pubs.opengroup.org/onlinepubs/9799919799/idx/threads.html))
 ### Explanation
 To solve the problem it's important to understand the concepts explained
 above to surpass deadlocks and lock shared resources when needed.
